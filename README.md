@@ -18,11 +18,11 @@ MI-GRAAL (Matching-based Integrative GRAph ALigner) is an advanced network align
 
 ### Supplementary Materials
 
-- **[Supplementary Figure 1](link)**
-- **[Supplementary File 1](link)**
-- **[Supplementary File 2](link)**
-- **[Supplementary File 3](link)**
-- **[All Supplementary Materials (ZIP)](link)**
+- **[Supplementary Figure 1](http://www0.cs.ucl.ac.uk/staff/natasa/MI-GRAAL/SupplementaryFigure1.png)**
+- **[Supplementary File 1](http://www0.cs.ucl.ac.uk/staff/natasa/MI-GRAAL/SupplementaryFile1.xls)**
+- **[Supplementary File 2](http://www0.cs.ucl.ac.uk/staff/natasa/MI-GRAAL/SupplementaryFile2.xls)**
+- **[Supplementary File 3](http://www0.cs.ucl.ac.uk/staff/natasa/MI-GRAAL/SupplementaryFile3.xls)**
+- **[All Supplementary Materials (ZIP)](http://www0.cs.ucl.ac.uk/staff/natasa/MI-GRAAL/ALL_SI.zip)**
 
 *Note: If download links don't work when clicked, copy and paste the URLs directly into your browser's address bar.*
 
@@ -122,10 +122,9 @@ MI-GRAAL produces alignment files with the specified output prefix, containing n
 
 ## Related Tools
 
-- **[GRAAL](http://www0.cs.ucl.ac.uk/staff/natasa/GRAAL/)** - GRaph ALigner
-- **[C-GRAAL](http://www0.cs.ucl.ac.uk/staff/natasa/C-GRAAL/)** - Common-neighbors-based alignment
-- **[L-GRAAL](http://www0.cs.ucl.ac.uk/staff/natasa/lagrangian-graal/)** - Lagrangian-based alignment
-- **[H-GRAAL](http://www0.cs.ucl.ac.uk/staff/natasa/H-GRAAL/)** - Hungarian algorithm-based alignment
+- **[GRAAL](https://github.com/przulj-lab/GRAAL/)** - GRaph ALigner
+- **[C-GRAAL](https://github.com/przulj-lab/C-GRAAL/)** - Common-neighbors-based alignment
+- **[L-GRAAL]((https://github.com/przulj-lab/L-GRAAL/)** - Lagrangian-based alignment
 
 ## Troubleshooting
 
