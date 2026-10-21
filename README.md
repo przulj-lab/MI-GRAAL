@@ -1,159 +1,60 @@
-# MI-GRAAL: Matching-based Integrative GRAph ALigner
+<div align="center">
 
-A matching-based integrative graph alignment algorithm for biological networks.
+<img src="images/header02.jpg" width="100%">
 
-## Authors
+# MI-GRAAL (Matching-based Integrative GRAph ALigner) Algorithm
 
-- Oleksii Kuchaiev
-- Natasa Przulj
+**Oleksii Kuchaiev and Nataša Pržulj**
 
-**Corresponding Author:** Prof. Natasa Przulj  
-📧 natasa.przulj@mbzuai.ac.ae
+Corresponding author: Prof. N. Pržulj, natasa.przulj@mbzuai.ac.ae
 
-## Overview
+<img src="images/largest_component.jpg" width="400">
 
-MI-GRAAL (Matching-based Integrative GRAph ALigner) is an advanced network alignment algorithm that integrates multiple graph matching strategies to align biological networks effectively.
+</div>
 
-## Resources
+## Downloads
 
-### Supplementary Materials
+- [Download MI-GRAAL](https://github.com/przulj-lab/MI-GRAAL/releases/download/v1.0/MI-GRAAL.tar.gz)
+- [Supplementary information](https://github.com/przulj-lab/MI-GRAAL/releases/download/v1.0/ALL_SI.zip): Supplementary Figure 1 and Supplementary Files 1–3, as one zip file
 
-- **[Supplementary Figure 1](http://www0.cs.ucl.ac.uk/staff/natasa/MI-GRAAL/SupplementaryFigure1.png)**
-- **[Supplementary File 1](http://www0.cs.ucl.ac.uk/staff/natasa/MI-GRAAL/SupplementaryFile1.xls)**
-- **[Supplementary File 2](http://www0.cs.ucl.ac.uk/staff/natasa/MI-GRAAL/SupplementaryFile2.xls)**
-- **[Supplementary File 3](http://www0.cs.ucl.ac.uk/staff/natasa/MI-GRAAL/SupplementaryFile3.xls)**
-- **[All Supplementary Materials (ZIP)](http://www0.cs.ucl.ac.uk/staff/natasa/MI-GRAAL/ALL_SI.zip)**
+## How to run MI-GRAAL
 
-*Note: If download links don't work when clicked, copy and paste the URLs directly into your browser's address bar.*
+- MI-GRAAL has been tested on Gentoo and Mandriva Linux, but should work on other distributions.
+- Download and unpack MI-GRAAL using the link above.
+- MI-GRAAL accepts networks in LEDA `.gw` format.
+- You need Python installed.
+- Run `./MI-GRAALRunner.py` without parameters to see usage directions.
+- The number of nodes in the first network must not be greater than the number of nodes in the second network.
 
-## System Requirements
+## Example
 
-- **Operating System**: Linux (tested on Gentoo and Mandriva distributions, should work on others)
-- **Python**: Required for running MI-GRAAL
-- **Network Format**: LEDA `.gw` format
-
-## Installation
-
-```bash
-git clone https://github.com/przulj-lab/MI-GRAAL.git
-cd MI-GRAAL
-chmod +x MI-GRAALRunner.py
-```
-
-## Requirements
-
-- Networks in LEDA `.gw` format
-- Python installed on your system
-
-### Important Constraint
-
-⚠️ **The number of nodes in the first network must not be greater than the number of nodes in the second network!**
-
-## Usage
-
-### Display Help
-
-```bash
-./MI-GRAALRunner.py
-```
-
-This will display usage directions and available parameters.
-
-### Basic Command
-
-```bash
-./MI-GRAALRunner.py network1.gw network2.gw output_prefix [options]
-```
-
-### Sample Usage
-
-Navigate to the MI-GRAAL directory and run:
-
+In the folder where you unpacked MI-GRAAL:
 ```bash
 ./MI-GRAALRunner.py testGraph1.gw testGraph2.gw result -p 3
 ```
 
-### Parameters
+## Converting an edge list to `.gw`
 
-- `network1.gw` - First network file (LEDA format)
-- `network2.gw` - Second network file (LEDA format)
-- `output_prefix` - Prefix for output alignment files
-- `-p` - Number of parallel processes (optional)
-
-## Input File Formats
-
-### Network Format
-
-MI-GRAAL accepts networks in LEDA `.gw` format.
-
-## Converting Edge Lists to LEDA Format
-
-If your network is in edge list format:
+If your network is an edge list:
 ```
 node1 node2
 node3 node4
 ...
 ```
-
-Use the provided `list2leda` script (included in `CodeAndTestData.zip`):
-
+convert it with the `list2leda` script included in the MI-GRAAL download:
 ```bash
 ./list2leda edgelist.txt >> graph.gw
 ```
+Self-loops, edge directions and duplicate edges are ignored.
 
-**Note:** Self-loops, directionality, and double edges will be ignored during conversion.
+## Other network alignment algorithms
 
-## Example Workflow
-
-1. **Prepare your networks in edge list format**
-2. **Convert to LEDA format**:
-   ```bash
-   ./list2leda network1_edgelist.txt >> network1.gw
-   ./list2leda network2_edgelist.txt >> network2.gw
-   ```
-3. **Run alignment**:
-   ```bash
-   ./MI-GRAALRunner.py network1.gw network2.gw alignment_result -p 3
-   ```
-
-## Output
-
-MI-GRAAL produces alignment files with the specified output prefix, containing node-to-node mappings between the input networks.
-
-## Related Tools
-
-- **[GRAAL](https://github.com/przulj-lab/GRAAL/)** - GRaph ALigner
-- **[C-GRAAL](https://github.com/przulj-lab/C-GRAAL/)** - Common-neighbors-based alignment
-- **[L-GRAAL]((https://github.com/przulj-lab/L-GRAAL/)** - Lagrangian-based alignment
-
-## Troubleshooting
-
-### Python Not Found
-Ensure Python is installed and in your PATH:
-```bash
-python --version
-```
-
-### Permission Denied
-Make the runner script executable:
-```bash
-chmod +x MI-GRAALRunner.py
-```
-
-### Network Size Mismatch
-Ensure the first network is smaller than or equal to the second network in size.
+- [IsoRank and IsoRankN](https://cb.csail.mit.edu/cb/mna/)
+- [GRAph ALigner (GRAAL)](https://github.com/przulj-lab/GRAAL)
+- (PathBlast](https://karlan.com/)
+- [GraphM package](https://www.minesparis.psl.eu/cbio/)
+- [Natalie](https://www.mi.fu-berlin.de/w/LiSA/Natalie)
 
 ## Citation
 
-If you use this code or data in your research, please cite:
-
-```
-Oleksii Kuchaiev, Nataša Pržulj
-Integrative network alignment reveals large regions of global network similarity in yeast and human
-Bioinformatics, Volume 27, Issue 10, May 2011, Pages 1390–1396
-https://doi.org/10.1093/bioinformatics/btr127
-```
-
-## Contact
-
-For questions or issues, please contact Prof. Natasa Przulj at natasa.przulj@mbzuai.ac.ae
+O. Kuchaiev and N. Pržulj. Integrative network alignment reveals large regions of global network similarity in yeast and human. *Bioinformatics* 27(10), 1390–1396 (2011). https://doi.org/10.1093/bioinformatics/btr127
