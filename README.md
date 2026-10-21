@@ -51,7 +51,7 @@ Self-loops, edge directions and duplicate edges are ignored.
 
 - [IsoRank and IsoRankN](https://cb.csail.mit.edu/cb/mna/)
 - [GRAph ALigner (GRAAL)](https://github.com/przulj-lab/GRAAL)
-- (PathBlast](https://karlan.com/)
+- [PathBlast](https://karlan.com/)
 - [GraphM package](https://www.minesparis.psl.eu/cbio/)
 - [Natalie](https://www.mi.fu-berlin.de/w/LiSA/Natalie)
 
